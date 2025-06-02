@@ -2,6 +2,7 @@
 // shortened-urls  express.js me 
 
 import express from "express";
+import { PORT } from "./env.js";
 
 const app = express();
 // home page 
@@ -33,7 +34,7 @@ app.get("/shortenedURL",(req,res)=>
 
 // const PORT = 3000;
 // const PORT =process.env.PORT || 3000;
-const PORT = 3000;
+// const PORT = 3000;
 app.listen(PORT,()=>{
     console.log(`server is running at port localhost:${PORT}`)
 })
