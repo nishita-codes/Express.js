@@ -105,3 +105,21 @@
 //   app.listen(PORT,()=>{
 //      console.log("server starting on port 3000");
 //  });
+
+
+
+
+// QUERY PARAMETER :-----------------------------------------------------------------------------
+ import express from "express";
+ import { PORT } from "./env.js";
+ import path from "path";
+
+ const app = express();
+
+ app.get("/product",(req,res)=>{
+    console.log(req.query);
+    res.send(`<h1>user search for Product ${req.query.search} page</h1>`)
+ });
+ app.listen(PORT,()=>{
+     console.log("server starting on port 3000");
+ });
