@@ -62,16 +62,46 @@
 
 // HOW TO SEND FILES IN EXPRESS.JS FOR CSS,HTML,IMAGES,JS:-------------------------------------------------------------------------
 
-import express from "express";
-import { PORT } from "./env.js";
- import path from "path";
+// import express from "express";
+// import { PORT } from "./env.js";
+//  import path from "path";
 
- const app = express();
-  const staticPath = path.join(import.meta.dirname,"public");
-  app.use(express.static(staticPath));
+//  const app = express();
+//   const staticPath = path.join(import.meta.dirname,"public");
+//   app.use(express.static(staticPath));
  
  
-  app.listen(PORT,()=>{
-     console.log("server starting on port 3000");
- });
+//   app.listen(PORT,()=>{
+//      console.log("server starting on port 3000");
+//  });
 
+
+
+
+
+// ROUTE PARAMTERS IN EXPRESS.JS:----------------------------------------------------------------------------------------------
+// import express from "express";
+// import { PORT } from "./env.js";
+//  import path from "path";
+
+//  const app = express();
+//   const staticPath = path.join(import.meta.dirname,"public");
+//   app.use(express.static(staticPath));
+  
+
+// FOR SINGLE ROUTE PARAMTER---------------------------------
+//   app.get("/profile/:username",(req,res)=>{
+//     console.log(req.params);
+//     res.send(`<h1> My username is ${req.params.username}</h1>`)
+//   });
+
+// FOR MULTIPLE ROUTE PARAMTER--------------------------------- slug--unique identify
+// app.get("/profile/:username/article/:slug",(req,res)=>{
+//     console.log(req.params);
+//     res.send(`<h1> article ${req.params.username} by ${req.params.slug}</h1>`)
+//   });
+ 
+ 
+//   app.listen(PORT,()=>{
+//      console.log("server starting on port 3000");
+//  });
