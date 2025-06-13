@@ -110,16 +110,38 @@
 
 
 // QUERY PARAMETER :-----------------------------------------------------------------------------
- import express from "express";
+//  import express from "express";
+//  import { PORT } from "./env.js";
+//  import path from "path";
+
+//  const app = express();
+
+//  app.get("/product",(req,res)=>{
+//     console.log(req.query);
+//     res.send(`<h1>user search for Product ${req.query.search} page</h1>`)
+//  });
+//  app.listen(PORT,()=>{
+//      console.log("server starting on port 3000");
+//  });
+
+
+
+// FORM SUBMISSION IN EXPRESS.JS:----------------------------------------------------------------------------------------------------
+
+import express from "express";
  import { PORT } from "./env.js";
  import path from "path";
 
  const app = express();
 
- app.get("/product",(req,res)=>{
-    console.log(req.query);
-    res.send(`<h1>user search for Product ${req.query.search} page</h1>`)
- });
+ app.use(express.urlencoded({extended:true}));  //middleware for accessing the post method 
+
+ app.post("/contact",(req,res)=>{
+    console.log(req.body);
+    res.redirect("/");
+ })
+
+
  app.listen(PORT,()=>{
      console.log("server starting on port 3000");
  });
