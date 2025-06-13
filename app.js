@@ -128,20 +128,46 @@
 
 // FORM SUBMISSION IN EXPRESS.JS:----------------------------------------------------------------------------------------------------
 
-import express from "express";
- import { PORT } from "./env.js";
- import path from "path";
+// import express from "express";
+//  import { PORT } from "./env.js";
+//  import path from "path";
 
- const app = express();
+//  const app = express();
 
- app.use(express.urlencoded({extended:true}));  //middleware for accessing the post method 
+//  app.use(express.urlencoded({extended:true}));  //middleware for accessing the post method 
 
- app.post("/contact",(req,res)=>{
-    console.log(req.body);
-    res.redirect("/");
- })
+//  app.post("/contact",(req,res)=>{
+//     console.log(req.body);
+//     res.redirect("/");
+//  })
 
 
- app.listen(PORT,()=>{
-     console.log("server starting on port 3000");
- });
+//  app.listen(PORT,()=>{
+//      console.log("server starting on port 3000");
+//  });
+
+
+
+// HANDLE 404 PAGE:----------------------------------------------------------------------------------------------------------
+// import express from "express";
+//  import { PORT } from "./env.js";
+//  import path from "path";
+
+//  const app = express();
+
+//  app.use(express.urlencoded({extended:true}));  //middleware for accessing the post method 
+
+//  app.post("/contact",(req,res)=>{
+//     console.log(req.body);
+//     res.redirect("/");
+//  });
+
+//  app.use((req,res)=>{   // at the end me use krna hai code ke 
+//     // return res.status(404).send("page mot found");
+//     return res.status(404).sendFile(path.join(import.meta.dirname,"views","404.html"));
+//  });
+
+
+//  app.listen(PORT,()=>{
+//      console.log("server starting on port 3000");
+//  });
