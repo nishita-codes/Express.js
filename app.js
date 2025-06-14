@@ -169,5 +169,47 @@
 
 
 //  app.listen(PORT,()=>{
-//      console.log("server starting on port 3000");
+//      console.log("server starting on port 3000");c
 //  });
+
+
+
+// EXPRESS.ROUTER():-----------------------------------------------------------------------------------------------------
+// import express from "express";
+//  const router = express.Router();
+
+//  router.get("/users" , (req,res)=>{
+//     res.send('lists of users');
+//  })
+
+//  export default router;//default export;
+
+//  export const router1 = router;//named export;
+
+
+
+// TEMPLATE ENGINE:-------------------------------------------------------------------------------------------------------
+import express from 'express';
+const app = express();
+ const router = express.Router();
+
+ const PORT = 3000;
+
+app.set('view engine', 'ejs'); // Tell express to use EJS
+app.set("views","./views");
+app.use("/", router);
+
+
+router.get("/report",(req,res)=>{
+    const student = {
+        name : "Nishita",
+        grade: "12th",
+        favoriteSubject: "Mathematics",
+    };
+     console.log(student);
+   return res.render("report" ,{ student });
+})
+
+app.listen(PORT,()=>{
+     console.log("server starting on port 3000");
+ });
