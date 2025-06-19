@@ -1,0 +1,5 @@
+//1file -> 2nd file 
+this is an sample file.
+we are learning about streans in node.js
+strems allow us to read and write data effeciently.
+lets process this file in chunks of 16 bytes.
